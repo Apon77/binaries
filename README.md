@@ -7,13 +7,13 @@ dpkg -x curl* dir
 Precompiled binaries
 
 # Compress to highest quality
-hc () 
+ hc () 
 
-{ 
+   { 
 
     tar cv $1 | xz -9 > $2.tar.xz
 
-}
+   }
 
 hc folder file
 
