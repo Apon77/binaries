@@ -1,3 +1,7 @@
+# From official apt!
+apt-get download curl
+dpkg -x curl* dir
+
 # Binaries
 Precompiled binaries
 
