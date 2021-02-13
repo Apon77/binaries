@@ -1,7 +1,9 @@
 # From official apt!
-apt-get download curl
 
+```bash
+apt-get download curl
 dpkg -x curl** dir
+```
 
 # Binaries
 Precompiled binaries
@@ -36,6 +38,5 @@ copy the libs in $HOME/.local/lib (if exists or needs)
 # .bash_profile
 ```bash
 export PATH=$HOME/.local/bin:$PATH
-
 export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
 ```
