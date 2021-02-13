@@ -1,7 +1,7 @@
-# binaries
+# Binaries
 Precompiled binaries
 
-# compress to highest quality 
+# Compress to highest quality
 hc () 
 { 
     tar cv $1 | xz -9 > $2.tar.xz
@@ -12,8 +12,13 @@ hc folder file
 or,
 tar cv path/to/data | xz -9 > file.tar.xz
 
-# decompress
+# Decompress
 tar -xf file.tar.xz
+
+# Copy
+Now, copy the bin in $HOME/.local/bin and 
+copy the libs in $HOME/.local/lib (if exists or needs)
 
 # .bash_profile
 export PATH=$HOME/.local/bin:$PATH
+export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
