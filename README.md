@@ -5,6 +5,9 @@ apt-get download curl
 dpkg -x curl** dir
 ```
 
+# Nix package manager!!
+They have done a very good work on precompiled binaries with even bleding edge packages! Let's download those binaries and use those. :-)
+
 # Binaries
 Precompiled binaries
 
