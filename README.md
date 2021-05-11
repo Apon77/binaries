@@ -1,7 +1,7 @@
 # From official apt!
 
 ```bash
-apt-get download curl
+apt download curl
 dpkg -x curl** dir
 ```
 
