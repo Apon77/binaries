@@ -7,7 +7,9 @@ dpkg -x curl** dir
 
 # Nix package manager!!
 They have done a very good work on precompiled binaries with even bleding edge packages! Let's download those binaries and use those. :-)
-
+1. Install nix package manager ```curl -L https://nixos.org/nix/install | sh```
+2. Install desired packages ```nix-shell -p neofetch```
+3. Copy the installed packages to your desired location ```cp /nix/store/3c6idwsrx95wbqfgha94b45cyr81ac1f-neofetch-unstable-2021-12-10/bin/neofetch ~/bin/```
 # Binaries
 Precompiled binaries
 
