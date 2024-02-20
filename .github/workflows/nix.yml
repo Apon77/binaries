@@ -1,12 +1,22 @@
 name: Nix Package Generate
 on:
   workflow_dispatch:
+    inputs:
+      PKG_NAME:
+        description: 'Packages to build'
+        required: true
+        default: "rsync"
 jobs:
   build:
+    name: Build packages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Download Nix packages
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          curl -L https://nixos.org/nix/install | sh
+          nix-shell -p ${{ github.event.inputs.PKG_NAME }}
+          echo ${{ github.event.inputs.PKG_NAME }}
+          ls -lah /nix/store/*${{ github.event.inputs.PKG_NAME }}*
+          curl https://bashupload.com/$(basename /nix/store/*${{ github.event.inputs.PKG_NAME }}*) 
+          \--data-binary @/nix/store/*${{ github.event.inputs.PKG_NAME }}*
