@@ -18,6 +18,7 @@ jobs:
             . /home/runner/.nix-profile/etc/profile.d/nix.sh
           nix-shell -p ${{ github.event.inputs.PKG_NAME }}
           which ${{ github.event.inputs.PKG_NAME }}
+          whereis ${{ github.event.inputs.PKG_NAME }}
 #          ls -lah /nix/store/*${{ github.event.inputs.PKG_NAME }}*
  #         curl https://bashupload.com/$(basename /nix/store/*${{ github.event.inputs.PKG_NAME }}*) 
   #        \--data-binary @/nix/store/*${{ github.event.inputs.PKG_NAME }}*
